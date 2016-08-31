@@ -1,0 +1,52 @@
+#######################################################################
+# Je nach Wunsch können hier Aktionen zum Erstellen von Abbildungen   #
+# aus Quelldateien eingetragen werden. Ein Beispiel für eine          #
+# Abbildung, deren Quellen sich in einem Unterverzeichnis befinden,   #
+# ist beigefügt.                                                      #
+#######################################################################
+
+# Variablen:
+# ==========
+
+# Unterverzeichnisse, die abgearbeitet werden müssen
+DIRS = 
+ 
+# Abbildungen in diesem Verzeichnis, die erstellt werden müssen
+FIGURES = 
+
+
+# Mögliche Ziele und Aktionen:
+# ============================
+
+# erzeuge alle Abbildungen
+all:	dirs $(FIGURES)
+
+# lösche alle Dateien bis auf die Quellen, sauberer Ausgangszustand
+# (gilt auch für die Unterverzeichnisse)
+clean:  clean_dirs
+	rm -f *.pdf
+
+# stelle einen sauberen Ausgangszustand her und erzeuge das Dokument
+new:    clean all
+
+
+# Spezielle Eigenschaften einiger Ziele (siehe make-Dokumentation):
+# =================================================================
+
+.PHONY: clean dirs $(DIRS) clean_dirs new
+
+
+# Behandlung von Zielen in den oben angegebenen Verzeichnissen:
+# =============================================================
+
+dirs: $(DIRS)
+
+clean_dirs:
+	$(foreach directory, $(DIRS), $(MAKE) -C $(directory) clean;)
+
+$(DIRS):
+	$(MAKE) -C $@
+
+
+# Ziele in diesem Verzeichnis (eigene Befehle zum Erzeugen der Abbildungen):
+# ==========================================================================

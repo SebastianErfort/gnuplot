@@ -1,0 +1,4 @@
+# jet colormap
+jet(x)=1.5-4*abs(x)
+set palette model RGB
+set palette functions jet(gray-0.75), jet(gray-0.5), jet(gray-0.25)

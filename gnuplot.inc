@@ -1,5 +1,3 @@
-#load inputDir.'/jet.pal'  # Mathematica-like color bar for palette plots
-
 set macros # Enable macros (strings evaluated using @MACRO)
  
 # parameters 
@@ -41,20 +39,26 @@ set fit errorvariables
 # Use these as strings that will be attached to other macros or
 # executed by using eval() or use as standalone macros
 
-# Tics and labels
+
+# Tics, labels and key
  
-unsetXLabel="unset xlabel;"
+setXLabel="set xlabel '$x$';"; unsetXLabel="unset xlabel;"
 setXTics="set xtics autofreq; set xtics format '%g';"
 unsetXTics="unset xtics; set xtics format '';"
  
-unsetYLabel="unset ylabel;"
+setYLabel="set ylabel '$y$';"; unsetYLabel="unset ylabel;"
 setYTics="set ytics autofreq; set ytics format '%g';"
 unsetYTics="unset ytics; set ytics format '';"
  
 setColorbox(opt)= (opt == "") ? "set colorbox;" : "set colorbox ".opt.";" # TODO enable usage with empty brackets only
 unsetColorbox="unset colorbox;"
  
-subPltMrgns(t,b,l,r) = sprintf("set tmargin at screen %1.4f; set bmargin at screen %1.4f; set lmargin at screen %1.4f; set rmargin at screen %1.4f;",t,b,l,r) # Function for setting top, bottom, left and right subplot margins
-   
+unsetKey="unset key;"
+
+
+# Function for setting top, bottom, left and right subplot margins
+subPltMrgns(t,b,l,r) = sprintf("set tmargin at screen %1.4f; set bmargin at screen %1.4f; set lmargin at screen %1.4f; set rmargin at screen %1.4f;",t,b,l,r)
+
+
 # Special plot settings
 setHeatmap="set pm3d map interpolate 0,0" # Plot 2d heat map using splot

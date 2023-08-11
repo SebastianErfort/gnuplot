@@ -1,0 +1,6 @@
+[submodule "colors/gnuplot-palettes"]
+	path = colors/gnuplot-palettes
+	url = https://github.com/Gnuplotting/gnuplot-palettes
+[submodule "colors/colorbrewer"]
+	path = colors/colorbrewer
+	url = https://github.com/aschn/gnuplot-colorbrewer

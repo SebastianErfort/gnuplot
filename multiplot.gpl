@@ -7,6 +7,7 @@
  
 # Variables nx and ny (number of columns and rows) have to be set in plot file before loading this file.
 w = (rm-lm)/nx; h = (tm-bm)/ny # Width and height of subplots
+if(!exist('iMax')) {iMax=nx*ny}
  
 set multiplot layout ny,nx # Set multiplot layout with ny rows and nx columns
  

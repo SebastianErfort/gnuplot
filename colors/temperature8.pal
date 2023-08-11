@@ -1,0 +1,16 @@
+# © Colorbrewer: Cynthia Brewer, Mark Harrower and The Pennsylvania State University
+# Permalink: https://colorbrewer2.org/?type=diverging&scheme=Spectral&n=8
+# Usage
+# load "temperature8.pal"
+# set output "temperature8.png"
+# test palette
+
+# line styles
+set style line 1 lt 1 lc rgb '#3288bd' #
+set style line 2 lt 1 lc rgb '#66c2a5' #
+set style line 3 lt 1 lc rgb '#abdda4' #
+set style line 4 lt 1 lc rgb '#e6f598' #
+set style line 5 lt 1 lc rgb '#fee08b' #
+set style line 6 lt 1 lc rgb '#fdae61' #
+set style line 7 lt 1 lc rgb '#f46d43' #
+set style line 8 lt 1 lc rgb '#d53e4f' #

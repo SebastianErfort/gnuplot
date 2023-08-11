@@ -1,0 +1,6 @@
+set linetype 1 lc rgb '#077187' # Blue Teal
+set linetype 2 lc rgb '#912f56' # Quinacridone Magenta
+set linetype 3 lc rgb '#531CB3' # Purple
+set linetype 4 lc rgb '#f6ae2d' # Honey Yellow
+set linetype 5 lc rgb '#5386E4' # United Nations Blue
+set linetype 6 lc rgb '#06BA63' # Medium Sea Green

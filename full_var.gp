@@ -1,8 +1,6 @@
-# NOTE: Obsolete file, use "half.inc". Kept only for old files.
- 
-load 'gnuplot.inc'
+load 'gnuplot.gpl'
 
-if (!exist('textwidthmult')) {textwidthmult=0.5}
+if (!exist('textwidthmult')) {textwidthmult=1.0}
 textwidth=6.21 #Latex textwidth in inches
 sizex=textwidth*textwidthmult
 if (exist('setAspectRatio')) {@setAspectRatio}

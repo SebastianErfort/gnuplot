@@ -1,0 +1,5 @@
+# Paths to supplementary files, data files, etc.
+HOME="`echo $HOME`"
+ 
+set loadpath HOME.'/.config/gnuplot/' # Base directory for gnuplot project, including .inc files
+load 'gnuplot.gp' # Load default environment

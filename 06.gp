@@ -1,6 +1,6 @@
-load 'gnuplot.inc'
+load inputDir.'/gnuplot.gpl'
 
-textwidthmult=1.0
+textwidthmult=0.6
 textwidth=6.21 #Latex textwidth in inches
 golden=(1.0+sqrt(5.0))/2.0
 sizex=textwidth*textwidthmult;sizey=sizex/golden

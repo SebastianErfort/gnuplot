@@ -1,7 +1,6 @@
-load 'gnuplot.inc'
+load 'gnuplot.gpl'
 
-set size square
-if (!exist('textwidthmult')) {textwidthmult=0.5}
+textwidthmult=1.0
 textwidth=6.21 #Latex textwidth in inches
 sizex=textwidth*textwidthmult;sizey=sizex
 

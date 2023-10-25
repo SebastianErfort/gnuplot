@@ -5,7 +5,7 @@
 # - LaTeX header, font, font size
 
 # Load basic settings, line styles, etc.
-load 'gnuplot.gpl'
+load 'gnuplot.gp'
 
 # Set variables
 if (!exist('textwidthmult')) { textwidthmult=1.0 }

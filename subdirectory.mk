@@ -1,15 +1,15 @@
-all: $(patsubst %.gpl,%.pdf,$(wildcard *.gpl))
+all: $(patsubst %.gp,%.pdf,$(wildcard *.gp))
 
 clean:
 	rm -f *~
 	rm -r *.pdf
 
-fast: $(patsubst %.gpl,%.pdf_fast,$(wildcard *.gpl))
+fast: $(patsubst %.gp,%.pdf_fast,$(wildcard *.gp))
 
 new: clean all
 	
-%.pdf: %.gpl
-	gnuplot -e "name='$*'" $*.gpl
+%.pdf: %.gp
+	gnuplot -e "name='$*'" $*.gp
 	pdflatex $*.tex > /dev/null
 	rm -f $*-inc.pdf $*.aux $*.log $*.tex
 	pdfcrop $*.pdf $*.pdf > /dev/null
@@ -17,7 +17,7 @@ new: clean all
 	ps2pdf $*.ps > /dev/null
 	rm -f $*.ps
 
-%.pdf_fast: %.gpl
-	gnuplot -e "name='$*'" $*.gpl
+%.pdf_fast: %.gp
+	gnuplot -e "name='$*'" $*.gp
 	pdflatex $*.tex > /dev/null
 	rm -f $*-inc.pdf $*.aux $*.log $*.tex

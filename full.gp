@@ -1,4 +1,4 @@
-load 'gnuplot.gpl'
+load 'gnuplot.gp'
 
 textwidthmult=1.0
 textwidth=6.21 #Latex textwidth in inches

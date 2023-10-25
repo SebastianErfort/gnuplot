@@ -1,6 +1,6 @@
 #!/usr/bin/gnuplot
 
-set loadpath '~/.gpl'
+set loadpath '~/.gp'
 load 'viridis.pal'
 
 set term pdfcairo enhanced color solid

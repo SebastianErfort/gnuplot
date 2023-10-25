@@ -1,4 +1,4 @@
-load 'gnuplot.gpl'
+load 'gnuplot.gp'
 
 set size square
 if (!exist('textwidthmult')) {textwidthmult=0.5}

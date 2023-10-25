@@ -1,6 +1,6 @@
-# NOTE: Obsolete file, use "half.gpl". Kept only for old files.
+# NOTE: Obsolete file, use "half.gp". Kept only for old files.
  
-load 'gnuplot.gpl'
+load 'gnuplot.gp'
 
 if (!exist('textwidthmult')) {textwidthmult=0.5}
 textwidth=6.21 #Latex textwidth in inches
